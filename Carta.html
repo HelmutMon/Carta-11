@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta de Amor Interactiva</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrapper" onclick="abrirCerrarCarta()">
+    <div class="sobre" id="sobre">
+      <div class="solapa"></div>
+      <div class="cuerpo"></div>
+    </div>
+    <div class="carta" id="carta">
+      <div class="contenido">
+        <h2>¡Hola amor!</h2>
+        <p>Quiero decirte que eres lo mejor que me ha pasado en la vida.</p>
+        <p>Te amo con todo mi corazón 💖</p>
+        <p>Espero que esta carta te haga sonreír tanto como tú me haces sonreír a mí.</p>
+        <button onclick="cerrarCarta()">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function abrirCerrarCarta() {
+      var sobre = document.getElementById("sobre");
+      var carta = document.getElementById("carta");
+      if (sobre.style.transform === "rotateY(-180deg)") {
+        sobre.style.transform = "rotateY(0deg)";
+        carta.style.display = "none";
+      } else {
+        sobre.style.transform = "rotateY(-180deg)";
+        carta.style.display = "block";
+      }
+    }
+
+    function cerrarCarta() {
+      var sobre = document.getElementById("sobre");
+      var carta = document.getElementById("carta");
+      sobre.style.transform = "rotateY(0deg)";
+      carta.style.display = "none";
+    }
+  </script>
+</body>
+</html>

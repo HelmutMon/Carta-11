@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.sobre {
+  width: 200px;
+  height: 300px;
+  background-color: #ff8080; /* Color rojo para la carta */
+  border: 1px solid #000000;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.sobre .solapa {
+  width: 100%;
+  height: 20%;
+  background-color: #ff3333; /* Color rojo más oscuro para la solapa */
+}
+
+.sobre .cuerpo {
+  width: 100%;
+  height: 80%;
+  background-color: #ff8080; /* Repetición del color rojo para el cuerpo */
+  cursor: pointer;
+  background-image: url('Corazon.png'); /* Agrega una imagen de corazón de fondo */
+  background-size: 50px; /* Tamaño de la imagen del corazón */
+  background-repeat: repeat; /* Repetir la imagen de fondo */
+}
+
+.carta {
+  display: none;
+  width: 200px;
+  height: 300px;
+  background-color: #ff8080; /* Repetición del color rojo para la carta */
+  border: 1px solid #000000;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contenido {
+  color: #ffffff; /* Color blanco para el texto */
+}
