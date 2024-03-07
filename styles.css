@@ -13,11 +13,11 @@ body {
 }
 
 .sobre {
-  width: 200px;
-  height: 300px;
+  width: 90vw; /* Utiliza el 90% del ancho de la ventana */
+  max-width: 300px; /* Establece un ancho máximo */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
   background-color: #ff8080; /* Color rojo para la carta */
   border: 1px solid #000000;
-  position: absolute;
   transform-style: preserve-3d;
   transition: transform 1s;
 }
@@ -33,15 +33,16 @@ body {
   height: 80%;
   background-color: #ff8080; /* Repetición del color rojo para el cuerpo */
   cursor: pointer;
-  background-image: url('Corazon.png'); /* Agrega una imagen de corazón de fondo */
+  background-image: url('corazon.png'); /* Agrega una imagen de corazón de fondo */
   background-size: 50px; /* Tamaño de la imagen del corazón */
   background-repeat: repeat; /* Repetir la imagen de fondo */
 }
 
 .carta {
   display: none;
-  width: 200px;
-  height: 300px;
+  width: 90vw; /* Utiliza el 90% del ancho de la ventana */
+  max-width: 300px; /* Establece un ancho máximo */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
   background-color: #ff8080; /* Repetición del color rojo para la carta */
   border: 1px solid #000000;
   padding: 20px;
@@ -54,4 +55,12 @@ body {
 
 .contenido {
   color: #ffffff; /* Color blanco para el texto */
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 600px) {
+  .sobre, .carta {
+    width: 90vw; /* Utiliza el 90% del ancho de la ventana */
+    max-width: none; /* Elimina el ancho máximo */
+  }
 }
