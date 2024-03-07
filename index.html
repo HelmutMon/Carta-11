@@ -1,47 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carta de Amor Interactiva</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para mi amor</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="wrapper" onclick="abrirCerrarCarta()">
-    <div class="sobre" id="sobre">
-      <div class="solapa"></div>
-      <div class="cuerpo"></div>
-    </div>
-    <div class="carta" id="carta">
-      <div class="contenido">
-        <h2>¡Hola amor!</h2>
-        <p>Quiero decirte que eres lo mejor que me ha pasado en la vida.</p>
-        <p>Te amo con todo mi corazón 💖</p>
-        <p>Espero que esta carta te haga sonreír tanto como tú me haces sonreír a mí.</p>
-        <button onclick="cerrarCarta()">Cerrar</button>
+  <div class="wrapper">
+    <div class="envelope" onclick="openEnvelope()">
+      <div class="front">
+          <div class="heart"></div>
       </div>
-    </div>
+      <div class="back"></div>
   </div>
-
-  <script>
-    function abrirCerrarCarta() {
-      var sobre = document.getElementById("sobre");
-      var carta = document.getElementById("carta");
-      if (sobre.style.transform === "rotateY(-180deg)") {
-        sobre.style.transform = "rotateY(0deg)";
-        carta.style.display = "none";
-      } else {
-        sobre.style.transform = "rotateY(-180deg)";
-        carta.style.display = "block";
-      }
-    }
-
-    function cerrarCarta() {
-      var sobre = document.getElementById("sobre");
-      var carta = document.getElementById("carta");
-      sobre.style.transform = "rotateY(0deg)";
-      carta.style.display = "none";
-    }
-  </script>
+    <div class="letter" id="letterContent">
+        <h1>Hola mi amor</h1>
+        <p>Ya son 11 meses juntos, que rapido pasa el tiempo a tu lado. Es decir cuando se es feliz el tiempo pasa volando.</p>
+        <p>Te amo muchisimo, eso nunca lo dudes, aunque podamos discutir o tener problemas no hare nada para dañarte</p>
+        <p>Tu eres la persona con la cual quiero compartir el resto de mi vida.</p>
+        <img src="Playa.jpg" alt="Foto de dia de playa">
+        <p>Además, te comparto una canción que no importa el dia que la escuches, te estare amando:</p>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1mk730fDkv29drhi0UMGrh?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>Ademas te quiero invitar a nuestra cita online para celebrar, en la cual podemos ver una pelicual y comer algo rico</p>
+        <p>¡Espero que te guste! Nos vemos pronto.</p>
+        <p>Te amo demasiado</p>
+        <p>Tu amor, el que siempre te amará</p>
+    </div>
+</div>
+    <script src="script.js"></script>
 </body>
 </html>

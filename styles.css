@@ -1,66 +1,101 @@
 body {
-  margin: 0;
-  padding: 0;
+  background-color: #f0f0f0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  margin: 0;
 }
 
 .wrapper {
   position: relative;
 }
 
-.sobre {
-  width: 90vw; /* Utiliza el 90% del ancho de la ventana */
-  max-width: 300px; /* Establece un ancho máximo */
-  height: auto; /* Permite que la altura se ajuste automáticamente */
-  background-color: #ff8080; /* Color rojo para la carta */
-  border: 1px solid #000000;
-  transform-style: preserve-3d;
-  transition: transform 1s;
-}
-
-.sobre .solapa {
-  width: 100%;
-  height: 20%;
-  background-color: #ff3333; /* Color rojo más oscuro para la solapa */
-}
-
-.sobre .cuerpo {
-  width: 100%;
-  height: 80%;
-  background-color: #ff8080; /* Repetición del color rojo para el cuerpo */
-  cursor: pointer;
-  background-image: url('corazon.png'); /* Agrega una imagen de corazón de fondo */
-  background-size: 50px; /* Tamaño de la imagen del corazón */
-  background-repeat: repeat; /* Repetir la imagen de fondo */
-}
-
-.carta {
-  display: none;
-  width: 90vw; /* Utiliza el 90% del ancho de la ventana */
-  max-width: 300px; /* Establece un ancho máximo */
-  height: auto; /* Permite que la altura se ajuste automáticamente */
-  background-color: #ff8080; /* Repetición del color rojo para la carta */
-  border: 1px solid #000000;
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: center;
+.envelope {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 60vw; /* Ajusta el tamaño del sobre según sea necesario */
+  height: 60vh; /* Ajusta el tamaño del sobre según sea necesario */
+  background-color: #fff;
+  border: 4px solid #a00c0c; /* Ajusta el grosor del borde según sea necesario */
+  border-radius: 20px; /* Ajusta el radio de las esquinas según sea necesario */
+  overflow: hidden;
 }
 
-.contenido {
-  color: #ffffff; /* Color blanco para el texto */
+.envelope .front {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+  position: relative;
 }
 
-/* Media query para pantallas más pequeñas */
-@media screen and (max-width: 600px) {
-  .sobre, .carta {
-    width: 90vw; /* Utiliza el 90% del ancho de la ventana */
-    max-width: none; /* Elimina el ancho máximo */
-  }
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px; /* Ajusta el tamaño del corazón según sea necesario */
+  height: 100px; /* Ajusta el tamaño del corazón según sea necesario */
+  background: url('Corazon.png') no-repeat center; /* Agrega la imagen del corazón */
+  background-size: contain;
+}
+
+.letter {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* Ajusta el ancho de la carta según el tamaño de la pantalla */
+  max-width: 600px; /* Ancho máximo para mantener la legibilidad en pantallas grandes */
+  max-height: 90%; /* Altura máxima para mantener el tamaño de la carta según el contenido */
+  padding: 20px;
+  background-color: #f3a1a1;
+  border: 4px solid #480000; /* Grosor y color del borde */
+  border-radius: 10px; /* Radio de las esquinas */
+  overflow-y: auto; /* Agrega desplazamiento vertical si el contenido es más largo que la carta */
+}
+
+.letter-content {
+  width: 100%; /* Ajusta el ancho del contenido al 100% del contenedor */
+}
+
+.letter.show {
+  display: inline-block; /* Muestra la carta cuando se hace clic en el sobre */
+}
+
+.letter h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.letter p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.letter img {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%; /* Limita el ancho máximo de la imagen al 100% del contenedor padre */
+  height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción de la imagen */
+}
+
+.letter iframe{
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+  height: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+iframe {
+  width: 100%;
 }
